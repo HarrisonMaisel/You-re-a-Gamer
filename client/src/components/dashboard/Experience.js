@@ -29,12 +29,12 @@ const Experience = ({ experience, deleteExperience }) => {
   ));
   return (
     <Fragment>
-      <h2 className='my-2'>Experience Credentials</h2>
+      <h2 className='my-2'>Experience</h2>
       <table className='table'>
         <thead>
           <tr>
-            <th>Company</th>
-            <th className='hide-sm'>Title</th>
+            <th>Game</th>
+            <th className='hide-sm'>Character/Role</th>
             <th className='hide-sm'>Years</th>
           </tr>
         </thead>
@@ -49,7 +49,4 @@ Experience.propTypes = {
   deleteExperience: PropTypes.func.isRequired
 };
 
-export default connect(
-  null,
-  { deleteExperience }
-)(Experience);
+export default connect(null, { deleteExperience })(Experience);

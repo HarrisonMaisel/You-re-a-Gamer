@@ -50,12 +50,12 @@ const Profile = ({
                   ))}
                 </Fragment>
               ) : (
-                <h4>No experience credentials</h4>
+                <h4>No experience provided</h4>
               )}
             </div>
 
             <div className='profile-edu bg-white p-2'>
-              <h2 className='text-primary'>Education</h2>
+              <h2 className='text-primary'>Ranks</h2>
               {profile.education.length > 0 ? (
                 <Fragment>
                   {profile.education.map(education => (
@@ -66,13 +66,9 @@ const Profile = ({
                   ))}
                 </Fragment>
               ) : (
-                <h4>No education credentials</h4>
+                <h4>No ranks provided</h4>
               )}
             </div>
-
-            {profile.githubusername && (
-              <ProfileGithub username={profile.githubusername} />
-            )}
           </div>
         </Fragment>
       )}
@@ -91,7 +87,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { getProfileById }
-)(Profile);
+export default connect(mapStateToProps, { getProfileById })(Profile);

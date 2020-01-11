@@ -32,10 +32,9 @@ const AddEducation = ({ addEducation, history }) => {
 
   return (
     <Fragment>
-      <h1 class='large text-primary'>Add Your Education</h1>
+      <h1 class='large text-primary'>Add Your Ranks</h1>
       <p class='lead'>
-        <i class='fas fa-code-branch' /> Add any school or bootcamp that you
-        have attended
+        <i class='fas fa-medal' /> Add the highest rank that you have achieved
       </p>
       <small>* = required field</small>
       <form
@@ -48,7 +47,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div class='form-group'>
           <input
             type='text'
-            placeholder='* School or Bootcamp'
+            placeholder='* Game'
             name='school'
             value={school}
             onChange={e => onChange(e)}
@@ -58,7 +57,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div class='form-group'>
           <input
             type='text'
-            placeholder='* Degree or Certificate'
+            placeholder='* Rank'
             name='degree'
             value={degree}
             onChange={e => onChange(e)}
@@ -68,7 +67,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div class='form-group'>
           <input
             type='text'
-            placeholder='Field of Study'
+            placeholder='Character/Role'
             name='fieldofstudy'
             value={fieldofstudy}
             onChange={e => onChange(e)}
@@ -95,7 +94,7 @@ const AddEducation = ({ addEducation, history }) => {
                 toggleDisabled(!toDateDisabled);
               }}
             />{' '}
-            Currently enrolled
+            Current Rank
           </p>
         </div>
         <div class='form-group'>
@@ -113,7 +112,7 @@ const AddEducation = ({ addEducation, history }) => {
             name='description'
             cols='30'
             rows='5'
-            placeholder='Program Description'
+            placeholder='Additional Notes'
             value={description}
             onChange={e => onChange(e)}
           />
@@ -131,7 +130,4 @@ AddEducation.propTypes = {
   addEducation: PropTypes.func.isRequired
 };
 
-export default connect(
-  null,
-  { addEducation }
-)(withRouter(AddEducation));
+export default connect(null, { addEducation })(withRouter(AddEducation));

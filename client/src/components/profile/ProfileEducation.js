@@ -12,13 +12,13 @@ const ProfileEducation = ({
       {!to ? ' Now' : <Moment format='YYYY/MM/DD'>{to}</Moment>}
     </p>
     <p>
-      <strong>Degree: </strong> {degree}
+      <strong>Rank: </strong> {degree}
     </p>
     <p>
-      <strong>Field of Study: </strong> {fieldofstudy}
+      <strong>Character/Role: </strong> {fieldofstudy}
     </p>
     <p>
-      <strong>Description:</strong> {description}
+      <strong>Notes:</strong> {description}
     </p>
   </div>
 );
